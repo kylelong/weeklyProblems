@@ -1,3 +1,4 @@
+#Given an unsorted array arr and a number n, delete all numbers in arr that are greater than n.
 def removeLarger(arr, n):
     for i in arr:
         if i > n:
