@@ -5,5 +5,5 @@ def mergeArray(arr):
         for x in range(len(arr[i])):
             l.append(arr[i][x])
     print(sorted(l))
-arr = [[1, 3], [2, 4, 5], [0, 9, 10, 11]]
-mergeArray(arr)
+#arr = [[1, 3], [2, 4, 5], [0, 9, 10, 11]]
+#mergeArray(arr)
