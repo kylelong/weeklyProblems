@@ -17,4 +17,5 @@ def repeatedSubstring(n, m)
     end
     -1
 end
+puts repeatedSubstring('abcd', 'cdabcdab')
 puts repeatedSubstring('ab', 'cab')
