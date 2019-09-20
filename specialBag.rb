@@ -1,4 +1,5 @@
 =begin
+Week 8/25/2019
 Let's say you have some special bags that can only hold up to 3kgs of weight.
 Given an array of integers (where each integer is between 1 and 3) that
 represent weights, determine how many bags you need to carry all of them.
