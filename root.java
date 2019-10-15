@@ -6,7 +6,6 @@ class root{
         }
     }
      static double root(double x, int n) {
-      // your code goes here
       double low = 0;
       double high = x;
       double mid = 0.0;
