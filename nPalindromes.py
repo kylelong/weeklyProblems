@@ -10,4 +10,4 @@ def nPalindrome(num):
         if isPalindrome(i):
             sum = sum + i
     return sum
-print(nPalindrome(2))
+print(nPalindrome(2)) #495
