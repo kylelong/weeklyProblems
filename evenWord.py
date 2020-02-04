@@ -19,5 +19,5 @@ def evenWord(s):
 		if v % 2 != 0:
 			remove = remove + 1
 	return remove
-print(evenWord("potato"))
-print(evenWord('aaaa'))
+print(evenWord("potato")) #2
+print(evenWord('aaaa')) #0
