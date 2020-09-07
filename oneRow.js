@@ -4,7 +4,7 @@
 let rowOne = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p']
 let rowTwo = ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l']
 let rowThree = ['z', 'x', 'c', 'v', 'b', 'n', 'm']
-//Looks at eache character of each word and dtermines if they are on the same row (in the saw array)
+//Looks at eache character of each word and dtermines if they are on the same row (in the same array as the first letter )
 function oneRow (arr) {
   words = []
   for (let i = 0; i < arr.length; i++) {
