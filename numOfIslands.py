@@ -1,9 +1,3 @@
-grid = [
-[0,1,1,1,0,0,0,1,1],
-[0,1,1,1,0,1,0,0,0],
-[0,1,0,0,0,0,0,1,0],
-[0,0,1,1,0,1,1,1,0],
-]
 def largestIsland(grid):
         max_size = float('-inf')
         num = 0
@@ -27,4 +21,10 @@ def largestIsland(grid):
                     scan(grid, i, j, 1)
         return max_size if max_size != float('-inf') else 0
 
+grid = [
+    [0,1,1,1,0,0,0,1,1],
+    [0,1,1,1,0,1,0,0,0],
+    [0,1,0,0,0,0,0,1,0],
+    [0,0,1,1,0,1,1,1,0],
+]
 assert(largestIsland(grid) == 7)
