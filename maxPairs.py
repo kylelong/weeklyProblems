@@ -1,4 +1,5 @@
 # https://buttondown.com/cassidoo/archive/to-lead-people-walk-behind-them-lao-tzu/
+
 def maxPairs(pairs):
     shoes, total = {}, 0
     for pair in pairs:
