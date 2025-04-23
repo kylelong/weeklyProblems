@@ -1,26 +1,24 @@
-from typing import List
+from typing import List, Set, Tuple
+
 def gridSum(grid: List[List[int]]) -> int:
-    total = 0
-    res = float('-inf')
-    
-    def helper(grid: List[List[int]], r: int, c: int, s):
-        nonlocal total
-        nonlocal res
-        pair = (r,c)
-        if pair in s or  r < 0 or r >= len(grid) or c < 0 or c >= len(grid[0]):
-            return 
+    rows, cols = len(grid), len(grid[0])
+    visited: Set[Tuple[int, int]] = set()
+    max_sum = float('-inf')
+
+    def dfs(r: int, c: int, total: int):
+        nonlocal max_sum
+        if (r, c) in visited or not (0 <= r < rows and 0 <= c < cols):
+            return
         total += grid[r][c]
-        if total > res:
-            res = total
-        s.add(pair)
-        helper(grid, r + 1, c,s)
-        helper(grid, r, c + 1,s)
-        helper(grid, r - 1, c,s)
-        helper(grid, r, c - 1,s)
-        total -= grid[r][c]
-        
-    helper(grid, 0, 0, set())
-    return res
+        max_sum = max(max_sum, total)
+        visited.add((r, c))
+        for dr, dc in ((1, 0), (0, 1), (-1, 0), (0, -1)):
+            dfs(r + dr, c + dc, total)
+        visited.remove((r, c))
+
+    dfs(0, 0, 0)
+    return max_sum
+
 
 grid1 = [
   [1, 2, 3],
